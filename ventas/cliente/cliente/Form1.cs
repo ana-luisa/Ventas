@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ventas
+namespace cliente
 {
     public partial class Form1 : Form
     {
@@ -19,7 +19,7 @@ namespace ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Categorias
+             //Ciudad
             var ciudad1 = new Ciudad();
             ciudad1.Id = 1;
             ciudad1.Nombre = "San Pedro";
@@ -32,20 +32,20 @@ namespace ventas
             var cliente1 = new Cliente();
             cliente1.Id = 1;
             cliente1.Nombre = "Ana Luisa Moreno";
-            cliente1.Telefono = 9467-5677;
+            cliente1.Telefono = "9467-5677";
             cliente1.Ciudad = ciudad1;
 
             Cliente cliente2 = new Cliente();
             cliente2.Id = 2;
             cliente2.Nombre = "Carlos Cardona";
-            cliente2.Telefono = 9548-6328;
+            cliente2.Telefono = "9548-6328";
             cliente2.Ciudad = ciudad1;
 
 
             Cliente cliente3 = new Cliente();
             cliente3.Id = 3;
             cliente3.Nombre = "Reyna Ramirez";
-            cliente3.Telefono = 9956-8741;
+            cliente3.Telefono = "9956-8741";
             cliente3.Ciudad = ciudad2;
 
 
@@ -55,10 +55,10 @@ namespace ventas
             listadeClientes.Add(cliente2);
             listadeClientes.Add(cliente3);
 
-            foreach (var p in listadeClientes) 
+            foreach (var c in listadeClientes) 
 
             {
-                MessageBox.Show(c.Id + " " + c.Ciudad.Nombre);
+                MessageBox.Show(c.Id + " " + c.Nombre + " " + c.Telefono + c.Ciudad.Nombre);
             }
 
 
@@ -66,3 +66,5 @@ namespace ventas
         }
     }
 }
+
+    
